@@ -1,4 +1,6 @@
-# # Questão 1
+import random
+
+# Questão 1
 m = int(input('Insira um número inteiro: '))
 n = int(input('insira outro numero inteiro: '))
 soma = 0
@@ -21,3 +23,29 @@ for i in range(qtdSeq-1):
         termo2 = termo0 + termo1
         print(termo2)
         termo0, termo1 = termo1, termo2
+
+# Questão 3
+n = int(input('Insira um número inteiro: '))
+t1 = random.randint(1,10)
+t2 = random.randint(1,10)
+print(t1, t2)
+while t1 + t2 != n:
+    t1 = random.randint(1,10)
+    t2 = random.randint(1,10)
+    print(t1, t2)
+
+# Questão 4
+n = int(input('Insira um número inteiro: '))
+for i in range(n):
+    n1 = random.randint(1,10)
+    n2 = random.randint(1,10)
+    print(f'{i+1}) {n1} + {n2} = {n1+n2}')
+
+# Questão 5
+n = int(input('Insira um número inteiro'))
+for i in range(2,n):
+    if n % i == 0:
+        print(f'{n} não é um número primo.')
+        break
+    else:
+        print(f'{n} é um número primo')
