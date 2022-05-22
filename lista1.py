@@ -2,7 +2,7 @@ import random
 
 # Questão 1
 m = int(input('Insira um número inteiro: '))
-n = int(input('insira outro numero inteiro: '))
+n = int(input('insira outro número inteiro: '))
 soma = 0
 while m < n:
     print(m)
@@ -42,7 +42,7 @@ for i in range(n):
     print(f'{i+1}) {n1} + {n2} = {n1+n2}')
 
 # Questão 5
-n = int(input('Insira um número inteiro'))
+n = int(input('Insira um número inteiro: '))
 primo = True
 for i in range(2,abs(n)):
     if abs(n) % i == 0:
@@ -54,4 +54,13 @@ else:
     print(f'{n} não é um número primo.')
 
 # Questão 6
+base = int(input('Insira um número inteiro positivo para ser a base: '))
+expoente = int(input('Insira um número inteiro positivo para ser o expoente: '))
+resultado = 1
+contador = 0
+while contador < expoente:
+    resultado *= base
+    contador += 1
+print(resultado)
 
+# Questão 7
