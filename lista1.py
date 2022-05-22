@@ -110,3 +110,12 @@ while True:
             print('Digite "s" para realizar outra operação ou "n" para sair do programa.')
     else:
         print('Número inválido. Digite um número de 1 a 3.')
+
+# Questão 8
+
+# Questão 9
+e1 = int(input('Digite a estatura da primeira pessoa (em cm): '))
+e2 = int(input('Digite a estatura da segunda pessoa (em cm): '))
+e3 = int(input('Digite a estatura da terceira pessoa (em cm): '))
+
+print()
