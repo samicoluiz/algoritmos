@@ -43,9 +43,15 @@ for i in range(n):
 
 # Questão 5
 n = int(input('Insira um número inteiro'))
-for i in range(2,n):
-    if n % i == 0:
-        print(f'{n} não é um número primo.')
+primo = True
+for i in range(2,abs(n)):
+    if abs(n) % i == 0:
+        primo = False
         break
-    else:
-        print(f'{n} é um número primo')
+if primo:
+    print(f'{n} é um número primo.')
+else:
+    print(f'{n} não é um número primo.')
+
+# Questão 6
+
