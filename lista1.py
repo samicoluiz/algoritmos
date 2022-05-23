@@ -1,3 +1,6 @@
+# Nome:         Luiz Sérgio Samico Maciel Filho
+# Matrícula:    202204940042
+
 import random
 
 # Questão 1 ########################################################
