@@ -1,5 +1,7 @@
 import random
 
+from numpy import infty
+
 # Questão 1
 m = int(input('Insira um número inteiro: '))
 n = int(input('insira outro número inteiro: '))
@@ -112,10 +114,41 @@ while True:
         print('Número inválido. Digite um número de 1 a 3.')
 
 # Questão 8
+x1 = int(input('Digite a coordenada x1: '))
+y1 = int(input('Digite a coordenada y1: '))
+x2 = int(input('Digite a coordenada x2: '))
+y2 = int(input('Digite a coordenada y2: '))
+x3 = int(input('Digite a coordenada x3: '))
+y3 = int(input('Digite a coordenada y3: '))
+
+d1 = ((x2-x1)**2+(y2-y1)**2)**0.5
+d2 = ((x3-x1)**2+(y3-y1)**2)**0.5
+d3 = ((x2-x3)**2+(y2-y3)**2)**0.5
+
+if d1 > 0 and d2 > 0 and d3 > 0:
+    if abs(d2-d3) < d1 and d1 < d2 + d3 or abs(d1-d3) < d2 and d2 < d1 + d3 or abs(d1-d2) < d3 and d3 < d1 + d2:
+        triangulo = True
+    else:
+        print('um dos lados precisa ser menor que a soma dos outros dois e maior que o valor absoluto da diferença entre os lados.')
+else:
+    print('Para que exista um triângulo, todos os lados precisam ser maiores que zero.')
+
+if triangulo:
+    tipo = ''
+    if d1 == d2 and d1 == d3 and d2 == d3:
+        tipo = 'Equilátero'
+    elif d1 != d2 and d1 != d3 and d2 != d3:
+        tipo = 'Escaleno'
+    else:
+        tipo = 'Isóceles'
+    print(f'O triângulo é do tipo {tipo} e tem lados ({round(d1, 1)}, {round(d2, 1)}, e {round(d3, 1)}).')
+
+
 
 # Questão 9
 e1 = int(input('Digite a estatura da primeira pessoa (em cm): '))
 e2 = int(input('Digite a estatura da segunda pessoa (em cm): '))
 e3 = int(input('Digite a estatura da terceira pessoa (em cm): '))
 
-print()
+maior = max(e1, e2, e3)
+menor = min(e1, e2, e3)
