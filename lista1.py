@@ -143,12 +143,15 @@ if triangulo:
         tipo = 'Isóceles'
     print(f'O triângulo é do tipo {tipo} e tem lados ({round(d1, 1)}, {round(d2, 1)}, e {round(d3, 1)}).')
 
-
-
 # Questão 9
 e1 = int(input('Digite a estatura da primeira pessoa (em cm): '))
 e2 = int(input('Digite a estatura da segunda pessoa (em cm): '))
 e3 = int(input('Digite a estatura da terceira pessoa (em cm): '))
-
-maior = max(e1, e2, e3)
-menor = min(e1, e2, e3)
+meio = 0
+if e1 != max(e1, e2, e3) and e1 != min(e1, e2, e3):
+    meio = e1
+if e2 != max(e1, e2, e3) and e2 != min(e1, e2, e3):
+    meio = e2
+if e3 != max(e1, e2, e3) and e3 != min(e1, e2, e3):
+    meio = e3
+print(f'As estaturas em ordem decrescente são:\n{max(e1, e2, e3)} cm, {meio} cm, e {min(e1, e2, e3)} cm.')
