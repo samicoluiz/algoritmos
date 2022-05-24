@@ -126,6 +126,7 @@ d1 = ((x2-x1)**2+(y2-y1)**2)**0.5
 d2 = ((x3-x1)**2+(y3-y1)**2)**0.5
 d3 = ((x2-x3)**2+(y2-y3)**2)**0.5
 
+triangulo = None
 if d1 > 0 and d2 > 0 and d3 > 0:
     if abs(d2-d3) < d1 and d1 < d2 + d3 or abs(d1-d3) < d2 and d2 < d1 + d3 or abs(d1-d2) < d3 and d3 < d1 + d2:
         triangulo = True
@@ -143,6 +144,8 @@ if triangulo:
     else:
         tipo = 'Isóceles'
     print(f'O triângulo é do tipo {tipo} e tem lados ({round(d1, 1)}, {round(d2, 1)}, e {round(d3, 1)}).')
+else:
+    print('os pontos não formam um triângulo.')
 
 # Questão 9 ########################################################
 e1 = int(input('Digite a estatura da primeira pessoa (em cm): '))
